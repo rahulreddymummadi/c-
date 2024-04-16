@@ -1,0 +1,47 @@
+#include <iostream>
+using namespace std;
+class Rectangle {
+    private:
+        int width;
+        int height;
+
+    public:
+        
+        Rectangle() {
+            width = 5;
+            height = 10;
+        }
+
+      
+        int getWidth() const {
+            return width;
+        }
+
+        int getHeight() const {
+            return height;
+        }
+
+      
+        void setWidth(int w) {
+            width = w;
+        }
+
+        void setHeight(int h) {
+            height = h;
+        }
+
+       
+        int getArea() const {
+            return width * height;
+        }
+};
+
+int main() {
+    Rectangle rect; 
+
+    std::cout << "Width: " << rect.getWidth() << std::endl;
+    std::cout << "Height: " << rect.getHeight() << std::endl;
+    std::cout << "Area: " << rect.getArea() << std::endl;
+
+    return 0;
+}
