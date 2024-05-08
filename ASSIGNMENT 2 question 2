@@ -1,0 +1,31 @@
+#include <iostream>
+#include <string>
+
+class Employee {
+private:
+    std::string name;
+    std::string id;
+    int salary;
+
+public:
+    
+    Employee(const std::string& n, const std::string& i, int s) : name(n), id(i), salary(s) {}
+
+    void raiseSalary(int amount) {
+        salary += amount;
+    }
+    void displayEmployeeDetails() const {
+        std::cout << "Employee Name: " << name << std::endl;
+        std::cout << "Employee ID: " << id << std::endl;
+        std::cout << "Salary: " << salary << std::endl;
+    }
+};
+
+int main() {
+    Employee johnDoe("John Doe", "E12345", 10000);
+    johnDoe.displayEmployeeDetails();
+    johnDoe.raiseSalary(5000);
+    johnDoe.displayEmployeeDetails();
+
+    return 0;
+}
